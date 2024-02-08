@@ -43,9 +43,10 @@ module "eks" {
         max_size = 3
         desired_size = 2
 
-        instance_type = ["t2.small"]
+        instance_type = ["t2.medium"]
     }
   }
+  enable_cluster_creator_admin_permissions = true
   tags = {
     Environment = "dev"
     Terraform   = "true"
